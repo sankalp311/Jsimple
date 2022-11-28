@@ -1,0 +1,1143 @@
+
+
+<style>
+    .dt-width {
+        width: 150px !important
+    }
+</style>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xl-12 col-xxl-12 col-lg-12 col-sm-12">
+            <div class="card mb-2">
+                <div class="card-body d-md-flex pl-4 pt-2 pr-4 pb-2  justify-content-between">
+                    <div class="d-flex  align-items-center">
+                        <div class="text-center">
+                            <h4 class="font-w600 mb-0" id="eventHeading" style="font-size: 24px;"></h4>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+           
+
+       
+            <div class="card">
+                <div class="card-header flex-wrap">
+                    <h4 class="card-title">Add a Name</h4>
+                    <div class="">
+                        <div class="dropdown">
+                          
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Action
+                            </button>
+                            <div class="dropdown-menu">
+
+                                <a class="dropdown-item">New</a>
+                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Delete</a>
+                               @* <a class="dropdown-item"><i class="fa fa-image text-primary me-2"></i> Cancellations</a>
+                                <a class="dropdown-item"><i class="fa fa-image text-primary me-2"></i> Room Blocks Only</a>
+                                <a class="dropdown-item"><i class="fa fa-image text-primary me-2"></i> All Names</a>
+                                <a class="dropdown-item"><i class="fa fa-image text-primary me-2"></i> Import Names</a>*@
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+      <div class="card-body">
+                    <form class="needs-validation" novalidate="">
+                        <div class="col-md-12">
+
+
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last</label>
+                                    <input type="text" class="form-control" id="RGCPLNM" placeholder="" maxlength="50" value="@_model.objEditRegistration.RGCPLNM" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First</label>
+                                    <input type="text" class="form-control" id="RGCPFNM" placeholder="" maxlength="10" value="@_model.objEditRegistration.RGCPFNM" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Middle</label>
+                                    <input type="text" class="form-control" id="RGCPMI" placeholder="" maxlength="35" value="@_model.objEditRegistration.RGCPMI" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                   <label for="lastName" class="form-label">Suffix</label>
+                                    <input type="text" class="form-control" id="RGCPSFX" placeholder="" maxlength="35" value="@_model.objEditRegistration.RGCPSFX" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                   <label for="lastName" class="form-label">Prefix</label>
+                                    <input type="text" class="form-control" id="RGCPPFX" placeholder="" maxlength="35" value="@_model.objEditRegistration.RGCPPFX" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Title</label>
+                                    <input type="text" class="form-control" disabled='' id="RGCPTLE" placeholder="" value="@_model.objEditRegistration.RGCPTLE" required="">
+                                     <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                                 <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Organization</label>
+                                    <input type="text" class="form-control" id="RGCPORG" placeholder="" value="@_model.objEditRegistration.RGCPORG" maxlength="20" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Address1 </label>
+                                    <input type="text" class="form-control" id="RGCPAD1" maxlength="15" placeholder="" value="@_model.objEditRegistration.RGCPAD1" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Address2</label>
+                                    <input type="text" class="form-control" id="RGCPAD2" placeholder="" maxlength="15" value="@_model.objEditRegistration.RGCPAD2" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">City </label>
+                                    <input type="text" class="form-control" id="RGCPCITY" maxlength="15" placeholder="" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">State</label>
+                                    <input type="text" class="form-control" id="RGCPST" placeholder="" maxlength="15" value="@_model.objEditRegistration.RGCPST" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Zip </label>
+                                    <input type="text" class="form-control" id="RGCPZIP" maxlength="15" placeholder="" value="@_model.objEditRegistration.RGCPZIP" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="RGCPCTRY" placeholder="" maxlength="15" value="@_model.objEditRegistration.RGCPCTRY" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Region </label>
+                                    <input type="text" class="form-control" id="RGCPREGN" maxlength="15" placeholder="" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Tel - O</label>
+                                    <input type="text" class="form-control" id="RGCPTEL" placeholder="" maxlength="15" value="@_model.objEditRegistration.RGCPTEL" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Fax - O</label>
+                                    <input type="text" class="form-control" id="RGCPFAX" maxlength="15" placeholder="" value="@_model.objEditRegistration.RGCPFAX" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Tel - H</label>
+                                    <input type="text" class="form-control" id="RGCHTEL" placeholder="" maxlength="15" value="@_model.objEditRegistration.RGCHTEL" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Tel - H</label>
+                                    <input type="text" class="form-control" id="RGCHFAX" maxlength="15" placeholder="" value="@_model.objEditRegistration.RGCHFAX" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Mobile</label>
+                                    <input type="text" class="form-control" id="RGCPMOBILE" placeholder="" maxlength="15" value="@_model.objEditRegistration.RGCPMOBILE" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="RGCEMAIL" maxlength="15" placeholder="" value="@_model.objEditRegistration.RGCEMAIL" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">CC Email</label>
+                                    <input type="text" class="form-control" id="RUCCCEMAIL" placeholder="" maxlength="15" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Date Rec</label>
+                                    <input type="text" class="form-control" id="RGDTREC" maxlength="15" placeholder="" value="@_model.objEditRegistration.RGDTREC" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Nickname</label>
+                                    <input type="text" class="form-control" id="RGCNIKNM" placeholder="" maxlength="15" value="@_model.objEditRegistration.RGCNIKNM" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Category</label>
+                                    <select name="cmnno" class="default-select form-control wide w-100">
+																  <option value="58327">1RMRQST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Room Request </option>
+<option value="58325">GRPLEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group Leader </option>
+<option value="58323">IND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual Reservation </option>
+<option value="58326">LOST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Lost </option>
+<option value="58324">RQST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group Block Request</option>
+
+																</select>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Statue</label>
+                                  <select @* onchange="bFormChanged = true;return getCancellationOption();"*@ name="rgcstat" class="default-select form-control wide w-100">
+																	<option value="ACT" selected="">Active</option>
+																	<option value="REG">Registered</option>
+																	<option value="XLD">Canceled</option>
+																	<option value="NSH">No Show</option>
+																	<option value="PEN">Pending</option>
+																	<option value="INC">Incomplete</option>
+																	</select>
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                             
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Ref </label>
+                                    <input type="text" class="form-control" id="CMCGLINC" maxlength="15" placeholder="" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  
+                                
+                            </div>
+                            
+
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Group</label>
+                                    <input type="text" class="form-control" id="CMCGLINC" maxlength="15" placeholder="" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Reg Batch</label>
+                                    <input type="text" class="form-control" id="CMCGLEXP" placeholder="" maxlength="15" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+
+                               
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Group Max</label>
+                                    <input type="text" class="form-control" id="CMCGLINC" maxlength="15" placeholder="" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Reg Batch</label>
+                                    <input type="text" class="form-control" id="CMCGLEXP" placeholder="" maxlength="15" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="row">
+
+                               
+                                
+                                                    <div class="col-md-6 mb-3">
+                                                        
+                                                        <div class="form-check custom-checkbox mt-md-4 checkbox-info check-xl">
+                                                            <input type="checkbox" checked='' class="form-check-input" id="" required="">
+                                                            <label class="form-check-label" for="customCheckBox4"> On Rm Mate List</label>
+                                                            <div class="invalid-feedback">
+                                                                Valid first name is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                               
+                                  <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Discount Code</label>
+                                    <input type="text" class="form-control" id="CMCGLEXP" placeholder="" maxlength="15" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+                      
+
+
+
+                        
+
+                        <div class="row mt-4">
+
+
+                            <div class="accordion accordion-header-bg accordion-bordered" id="accordion-eleven">
+                                <div class="accordion-item">
+                                    <div class="accordion-header collapsed" id="accord-11One" data-bs-toggle="collapse" data-bs-target="#collapse11One" aria-controls="collapse11One" aria-expanded="true" role="button">
+                                        <span class="accordion-header-icon"></span>
+                                        <span class="accordion-header-text">History</span>
+                                        <span class="accordion-header-indicator"></span>
+                                    </div>
+                                    <div id="collapse11One" class="collapse accordion__body" aria-labelledby="accord-11One" data-bs-parent="#accordion-eleven">
+                                        <div class="accordion-body-text">
+                                            <div class="col-md-12">
+
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="from" class="form-label">From</label>
+                                                        <textarea id="" class="form-control"></textarea>
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="to" class="form-label">To</label><br />
+                                                        <textarea id="" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="from" class="form-label">Date</label>
+                                                        <input type="text" class="form-control" id="CMCGLEXP" placeholder="" maxlength="15" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="to" class="form-label">Requester</label><br />
+                                                        <input type="text" class="form-control" id="CMCGLEXP" placeholder="" maxlength="15" value="" required="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="from" class="form-label">Comments</label>
+                                                        <textarea id="" class="form-control"></textarea>
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-3 mb-3">
+                                                             <button type="button" class="btn btn-info">
+                                Registration
+                            </button>
+                                                    </div> 
+                                                    <div class="col-md-3 mb-3">
+                                                           <button type="button" class="btn btn-info">
+                                Activities
+                            </button>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                           <button type="button" class="btn btn-info">
+                                Finance
+                            </button>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                          <button type="button" class="btn btn-info">
+                                Reservations
+                            </button>
+                                                    </div>
+
+                                                </div>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header collapsed" id="accord-11Two" data-bs-toggle="collapse" data-bs-target="#collapse11Two" aria-controls="collapse11Two" aria-expanded="true" role="button">
+                                        <span class="accordion-header-icon"></span>
+                                        <span class="accordion-header-text">Agent Notes, Personalized Conf. Text and Imported Profile Fields</span>
+                                        <span class="accordion-header-indicator"></span>
+                                    </div>
+                                    <div id="collapse11Two" class="collapse accordion__body" aria-labelledby="accord-11Two" data-bs-parent="#accordion-eleven">
+                                        <div class="accordion-body-text">
+                                            <div class="col-md-12">
+
+
+
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                           Personalized confirmation text
+                                                        </label>
+                                                        <textarea id="CMCCNFFTR" class="form-control"></textarea>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                            Agent notes (Does not print on confirmations)
+                                                        </label>
+                                                        <textarea id="CMCCNFHDR" class="form-control"></textarea>
+                                                    </div>
+
+                                                </div>
+
+                                                    <h3 class="mt-4 mb-4 fs-24 text-black form-heading">Imported Profile Information</h3>
+                                             
+                                                <div class="row">
+                                                    
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                            A
+                                                        </label>
+                                                         <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                           B
+                                                        </label>
+                                                         <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                    </div>
+
+                                                </div>
+                                                 <div class="row">
+                                                    
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                           C
+                                                        </label>
+                                                         <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                           D
+                                                        </label>
+                                                         <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                    </div>
+
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                        E
+                                                        </label>
+                                                         <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                    </div>
+                                                </div>
+                                                 <h3 class="mt-4 mb-4 fs-24 text-black form-heading">To Do and Website</h3>
+                                                <div class="row">
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                            To do
+                                                        </label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">
+                                                            Web Site
+                                                        </label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header collapsed" id="accord-11Three" data-bs-toggle="collapse" data-bs-target="#collapse11Three" aria-controls="collapse11Three" aria-expanded="true" role="button">
+                                        <span class="accordion-header-icon"></span>
+                                        <span class="accordion-header-text">Alternate Billing Information</span>
+                                        <span class="accordion-header-indicator"></span>
+                                    </div>
+                                    <div id="collapse11Three" class="collapse accordion__body" aria-labelledby="accord-11Three" data-bs-parent="#accordion-eleven">
+                                        <div class="accordion-body-text">
+                                            <div class="col-md-12">
+
+                                                
+
+                                                <div class="row">
+
+                                                    <div class="col-md-8 mb-3">
+                                                        <label for="lastName" class="form-label">Last</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="lastName" class="form-label">Suffix</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-8 mb-3">
+                                                        <label for="lastName" class="form-label">First</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="lastName" class="form-label">Prefix</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">Title</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">Organization</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="firstName" class="form-label">Address1</label>
+                                                        <input type="text" class="form-control" id="" placeholder="" maxlength="10" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid first name is required.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="firstName" class="form-label">Address2</label>
+                                                        <input type="text" class="form-control" id="" maxlength="255"  placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid first name is required.
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">City</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">State</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Zip</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Country</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Region</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Telephone</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Fax</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Email</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                
+                                      
+
+
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header collapsed" id="accord-11Three" data-bs-toggle="collapse" data-bs-target="#collapse11Three" aria-controls="collapse11Three" aria-expanded="true" role="button">
+                                        <span class="accordion-header-icon"></span>
+                                        <span class="accordion-header-text">Additional Information</span>
+                                        <span class="accordion-header-indicator"></span>
+                                    </div>
+                                    <div id="collapse11Three" class="collapse accordion__body" aria-labelledby="accord-11Three" data-bs-parent="#accordion-eleven">
+                                        <div class="accordion-body-text">
+                                            <div class="col-md-12">
+
+                                                
+
+                                                 <h3 class="mt-4 mb-4 fs-24 text-black form-heading">CEU Information</h3>
+
+                                                <div class="row">
+
+                                                    <div class="col-md-8 mb-3">
+                                                        <label for="lastName" class="form-label">CEU Status</label>
+                                                        <select class="default-select form-control wide w-100" onchange="bFormChanged = true;" name="rgcceu_status" id="rgcceu_status">
+																						<option value="">-Select One-</option>
+																						<option value="Yes">Yes</option>
+																						<option value="No">No</option></select>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="lastName" class="form-label">Date</label>
+                                                        <input type="text" class="datepicker-default form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                 <h3 class="mt-4 mb-4 fs-24 text-black form-heading">Demographic Information</h3>
+                                               
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Update Profile</label>
+                                                       <select class="default-select form-control wide w-100" onchange="bFormChanged = true;" name="rgcceu_status" id="rgcceu_status">
+																						<option value="">-Select One-</option>
+																						<option value="Yes">Yes</option>
+																						<option value="No">No</option></select>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Region/Area</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Diet</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Ethinicity</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">CID#</label>
+                                                        <input type="text" class="form-control" id="CMCSERVERADDRESS" placeholder="" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="firstName" class="form-label">Accessibility Issues</label>
+                                                        <input type="text" class="form-control" id="" placeholder="" maxlength="10" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid first name is required.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="firstName" class="form-label">VIP Information</label>
+                                                        <select class="default-select form-control wide w-100" name="rgcvipdsc">
+																						  <option value="">--- Select VIP Servicing Information ---</option>
+<option value="vanessak">vanessak</option>
+<option value="gdavis">gdavis</option>
+<option value="Other">Other</option>
+																						</select>
+                                                    </div>
+
+                                                </div>
+
+
+                                                  <h3 class="mt-4 mb-4 fs-24 text-black form-heading">Passport Information</h3>
+                                                
+
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Name</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Passport#</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">issued Date</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Exp. </label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Citizenship</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Gendor</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Birthplace</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">D. O. B.</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+
+                                                <h3 class="mt-4 mb-4 fs-24 text-black form-heading">Emergency Information</h3>
+                                                
+                                       <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Name</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Telephone</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Alternate Telephone</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                   
+
+
+
+                                                </div>
+                                                
+                                                <div class="row">
+
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="lastName" class="form-label">Comment</label>
+                                                        <input type="text" class="form-control" id="CMCBLOCKCODE1" maxlength="255" onkeypress="return onlyAlphanumerics(event)" value="" required="">
+                                                        <div class="invalid-feedback">
+                                                            Valid last name is required.
+                                                        </div>
+                                                    </div>
+                                                   
+
+
+
+                                                </div>
+
+
+                                                 <h3 class="mt-4 mb-4 fs-24 text-black form-heading">PlaceHolder/Copy Options</h3>
+
+
+                                                 <div class="row">
+
+
+
+                                                    <div class="col-md-6 mb-3">
+                                                      
+                                                        <div class="form-check custom-checkbox mt-md-4 checkbox-info check-xl">
+                                                            <input type="checkbox" class="form-check-input" checked='' id="" required="">
+                                                            <label class="form-check-label" for="customCheckBox4"> Source Record</label>
+                                                            <div class="invalid-feedback">
+                                                                Valid first name is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                 <div class="row" id="Cuttoffrow">
+                                                    
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Copy Date</label>
+                                                        <input type="text" class="datepicker-default form-control picker__input" id="CMDTMIN_PAYMENT_DATE" placeholder="" maxlength="20" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Max. Copies</label>
+                                                        <input type="text" class="form-control" id="CMN_MIN_PAYMENT_AMNT" maxlength="15" placeholder="" value="" required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <hr class="mb-4">
+                              @*   <div class="d-flex justify-content-between  align-items-center">
+                       
+                        <a href="/admin/Registration/Index"  style="min-width: 250px;" class="btn btn-dark btn-lg mb-2"><i class="fas fa-arrow-left me-3"></i>Back</a>
+
+                    </div>*@
+                               <button onclick="BacktoRegistrationList()" class="btn btn-dark btn-lg mb-2" type="button">
+                                    <i class="fas fa-arrow-left me-3"></i> Back
+                                </button>
+                                <input onclick="SaveName(@_model.objEditRegistration.RGNNO);" type="button" value="Save" id="btn_save" class="btn btn-info btn-lg float-md-end mb-2" />
+
+                                @* <button class="btn btn-info btn-lg float-md-end mb-2" type="submit">
+                                        Save
+                                    </button>*@
+                                <button href="/admin/Registration/Index" class="btn btn-dark btn-lg float-md-end mb-2 me-3" type="button">
+                                    <span class="me-3"><i class="fa fa-times"></i></span> Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
