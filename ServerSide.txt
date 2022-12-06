@@ -64,3 +64,9 @@ return $('#SelectedSitesTable').dataTable({
     }
  
 });
+
+http://157.55.209.127/eventmanager/forms/Login.asp?WCI=Login&WCE=DoLogin
+
+
+ttevents
+icmsa1
