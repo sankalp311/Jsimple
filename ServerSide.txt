@@ -11,3 +11,6 @@ function unloadPage(){
 }
 
 window.onbeforeunload = unloadPage;
+
+
+D:\OneDrive - JSIMPLE\workArea\nakul\2022-12-06(For publish)
