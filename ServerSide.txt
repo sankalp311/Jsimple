@@ -1,16 +1,78 @@
-var unsaved = false;
-
-$(":input").change(function(){ //triggers change in all input fields including text type
-    unsaved = true;
-});
-
-function unloadPage(){ 
-    if(unsaved){
-        return "You have unsaved changes on this page. Do you want to leave this page and discard your changes or stay on this page?";
-    }
-}
-
-window.onbeforeunload = unloadPage;
 
 
-D:\OneDrive - JSIMPLE\workArea\nakul\2022-12-06(For publish)
+ALTER Procedure sp_GetEventOptionsData     
+-- =============================================                  
+-- Author:  Sankalp                
+-- Create date: 22/08/2022                  
+-- Description: To get event option list by EMNNO                                 
+-- =============================================   
+@EMNNO int      
+as       
+begin      
+select      
+   EONNO,EMNNO,EOCGROUP, ISNULL(EOCNAME,'') EOCNAME,
+   ISNULL(EOCTYPE,'') EOCTYPE, ISNULL(EOCACTION,'') EOCACTION  from EVENT_OPTIONS where EMNNO=@EMNNO;
+end 
+
+GO
+
+
+alter PROCEDURE usp_icm_get_registration_list (                  
+@EMNNO INT                 
+)                  
+AS                  
+BEGIN                  
+-- =============================================                  
+-- Author:  Lalit Chauhan                
+-- Create date: 22/08/2022                  
+-- Description: To get registration list  by htnno                  
+-- EXEC usp_icm_get_registration_list '753'                 
+-- =============================================                  
+                  
+ SELECT distinct  top 5000 isnull(org.RGCPFNM, '') RGCPFNM, isnull(org.RGCPLNM, '') RGCPLNM, c.CMCACRO, org.RGCSTAT, isnull(org.RGCPORG, '') RGCPORG          
+ ,isnull(org.RGCPCITY, '') RGCPCITY, isnull(org.RGCPST, '') RGCPST, isnull(org.RGCNO, '') RGCNO          
+ , isnull(h.HTCDSC, '') HTCDSC, isnull(org.RGCEMAIL, '') RGCEMAIL          
+ , CONVERT(varchar,org.RGDTADD,22) RGDTADD, '' as RGGroup, '' as RGLeader          
+ , cast(isnull(org.RGN_ID, '') as varchar) RGN_ID,'<div class="dropdown"> <button type="button" class="btn btn-primary light sharp" data-bs-toggle="dropdown">                               
+  <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1">                              
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><circle fill="#000000" cx="5" cy="12" r="2" />                              
+  <circle fill="#000000" cx="12" cy="12" r="2" /><circle fill="#000000" cx="19" cy="12" r="2" /></g></svg> </button> <div class="dropdown-menu">                               
+  <a href="/admin/Registration/EditRegistration?RGNNO='+ CONVERT(VARCHAR,RGNNO)+'" class="dropdown-item">Edit</a><a  onclick="DeleteRegistrationDtl('+CONVERT(VARCHAR,RGNNO)+')" class="dropdown-item">                
+ Delete</a>  </div>                               
+  </div>' [Action]      
+ FROM REGMST org          
+  Join CATEGORY c          
+  on c.EMNNO = org.EMNNO      
+   and c.CMNNO = org.CMNNO          
+  left join CATEGORY_HOTELS ch          
+   on ch.CMNNO = org.CMNNO          
+  left join HOTELROOMCATEGORIES hrc      
+   on hrc.HRNNO = ch.HRNNO          
+  left join HOTEL h          
+   on h.HTNNO = hrc.HTNNO          
+ where org.EMNNO=@EMNNO;      
+END
+GO
+
+alter Proc [dbo].[usp_icm_Getvendors]       
+-- =============================================                    
+-- Author: SANKALP                   
+-- Create date: 10/10/2022                    
+-- Description: Get vedor details                   
+-- =============================================       
+as        
+begin            
+select top 200 VNNNO,VNCACRO,VNCORG,VNCCITY,VNCST,VNCZIP,VNCCNTRY,'<div class="dropdown" style="text-align:center;">  
+                                                <button type="button"  class="btn btn-primary light sharp" data-bs-toggle="dropdown">  
+                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" 
+cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg>  
+                                                </button>  
+                                                <div class="dropdown-menu">  
+                                                 <a  href="/admin/vendor/VendorDetails?acRo='+ CONVERT(VARCHAR,VNCACRO)+'" class="dropdown-item">Edit</a>  
+                                                 <a onclick="DeleteVendor('+CONVERT(VARCHAR,VNNNO)+' ,'''+ CONVERT(VARCHAR,VNCACRO)+''')" class="dropdown-item">Delete</a>  
+                                                </div>  
+                                            </div>' [Action]  
+  
+from VENDOR order by  VNNNO desc
+end
+GO
