@@ -1,11 +1,2 @@
-select [Column], cast([Value] as varchar(500))
-from
-    (
-        select [TaskId], [Id], [SeqNumber]
-        from Schedule
-    ) as piv
-UNPIVOT
-    (  
-        [Value]
-        for [Column] in ([TaskId], [Id], [SeqNumber])
-    ) as unpiv
+Copy Option is completed, Some Other issues is fixed in registration analyzing Finance flow and add and grid html is completed.
+Trigger is working in REGMST table.
