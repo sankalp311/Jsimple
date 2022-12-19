@@ -1,1 +1,5 @@
-onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off
+$('#ccnumber').text(function(_, val) {
+  return val.replace(/\d{12}(\d{4})/, "************$1");
+});
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="ccnumber">1234567891234567</div>
