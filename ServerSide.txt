@@ -1,5 +1,8 @@
-American Express		fa fa-cc-amex
-Discover		fa fa-cc-discover
-Visa		fa fa-cc-visa
-Mastercard		fa fa-cc-mastercard
-Other		fa fa-credit-card
+ 
+
+
+
+
+  <script src="https://example.com/fontawesome/v6.2.1/js/fontawesome.js" data-auto-replace-svg="nest"></script>
+  <script src="https://example.com/fontawesome/v6.2.1/js/solid.js"></script>
+  <script src="https://example.com/fontawesome/v6.2.1/js/brands.js"></script>
