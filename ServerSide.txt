@@ -1,3 +1,10 @@
-<link rel="stylesheet"
-        href=
-"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+const regex = /^(?=.*[a-z])[a-z\s.'-]+$/i;
+
+console.log(regex.test('Hello World'), 'should be true');
+console.log(regex.test('Hello.World'), 'should be true');
+console.log(regex.test('Hello-World'), 'should be true');
+console.log(regex.test(`'Hello- World.'`), 'should be true');
+console.log(regex.test('Hello $ World'), 'should be false');
+console.log(regex.test('Hello@World'), 'should be false');
+// Min. one A-Z char required. 
+console.log(regex.test(`'.- `), 'should be false');
