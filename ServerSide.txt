@@ -1,6 +1,27 @@
- var selectedIds = tbl.columns().checkboxes.selected()[0];
-   console.log(selectedIds)
+var id = "";
+      var oTable = $(".table").dataTable();
 
-   selectedIds.forEach(function(selectedId) {
-       alert(selectedId);
-   });
+      $(".check_quality:checked", oTable.fnGetNodes()).each(function() {
+          if (id != "") {
+              id = id + "," + $(this).data('id');
+          } else {
+              id = $(this).data('id');
+          }
+      });
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      var count = $('#datatable').DataTable().rows( '.selected' ).count();
+
+var checked_rows = $('#datatable').DataTable().rows( '.selected' ).data();
+
+for(var i=0; i<checked_rows.length; i++)
+{
+  console.log( checked_rows[i] );               
+}
