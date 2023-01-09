@@ -1,10 +1,6 @@
- $('#btnSubmit').on('click', function() {
-       //Hold the Object Data what are the checkbox selected
-       var tblData = table.api().rows('.selected').data();
-       var tmpData;
-       //Iterate the Object and extract you one one by one row data With Hidden Id Also
-          $.each(tblData, function(i, val) {
-            tmpData = tblData[i];
-            alert(tmpData);
-          }); 
-    })
+ var selectedIds = tbl.columns().checkboxes.selected()[0];
+   console.log(selectedIds)
+
+   selectedIds.forEach(function(selectedId) {
+       alert(selectedId);
+   });
