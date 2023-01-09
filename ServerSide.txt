@@ -1,68 +1,42 @@
-  <div id="wrapper">
+$(document).ready(function (){
+   var table = $('#example').DataTable({
+      'ajax': '/lab/jquery-datatables-checkboxes/ids-arrays.txt',
+      'columnDefs': [
+         {
+            'targets': 0,
+            'checkboxes': {
+               'selectRow': true
+            }
+         }
+      ],
+      'select': {
+         'style': 'multi'
+      },
+      'order': [[1, 'asc']]
+   });
 
 
-    <div class="scrollbar" id="style-4">
-      <div class="force-overflow"></div>
-    </div>
-</div>
-<style>
-    header
-{
-	font-family: 'Lobster', cursive;
-	text-align: center;
-	font-size: 25px;	
-}
+   // Handle form submission event
+   $('#frm-example').on('submit', function(e){
+      var form = this;
 
-#info
-{
-	font-size: 18px;
-	color: #555;
-	text-align: center;
-	margin-bottom: 25px;
-}
+      var rows_selected = table.column(0).checkboxes.selected();
 
-a{
-	color: #074E8C;
-}
+      // Iterate over all selected checkboxes
+      $.each(rows_selected, function(index, rowId){
+         // Create a hidden element
+         $(form).append(
+             $('<input>')
+                .attr('type', 'hidden')
+                .attr('name', 'id[]')
+                .val(rowId)
+         );
+      });
+   });
+});
 
-.scrollbar
-{
-	margin-left: 30px;
-	float: left;
-	height: 300px;
-	width: 65px;
-	background: #F5F5F5;
-	overflow-y: scroll;
-	margin-bottom: 25px;
-}
 
-.force-overflow
-{
-	min-height: 450px;
-}
 
-#wrapper
-{
-	text-align: center;
-	width: 500px;
-	margin: auto;
-}
-#style-4::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
-}
 
-#style-4::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
-}
-
-#style-4::-webkit-scrollbar-thumb
-{
-	background-color: #000000;
-	border: 2px solid #555555;
-}
-
-</style>
+<link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
+<script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
