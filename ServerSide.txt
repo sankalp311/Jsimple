@@ -1,8 +1,10 @@
-var row = $("#example").column(0).checkboxes.selected();
-// Create variable for the ids array
-var selected_items = [];
-// Loop through to get the selected id
-$.each(row, function(index, rowId){
-   //this add selected ID as object into array
-   selected_items.push({id:rowId});
-});
+ $('#btnSubmit').on('click', function() {
+       //Hold the Object Data what are the checkbox selected
+       var tblData = table.api().rows('.selected').data();
+       var tmpData;
+       //Iterate the Object and extract you one one by one row data With Hidden Id Also
+          $.each(tblData, function(i, val) {
+            tmpData = tblData[i];
+            alert(tmpData);
+          }); 
+    })
