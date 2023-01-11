@@ -1,1 +1,13 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+SELECT [name], create_date, modify_date
+FROM sys.procedures
+ORDER BY 3 DESC;
+
+
+
+EXEC sp_helptext N'usp_icm_get_event_admin_information';
+
+
+
+SELECT [name], create_date, modify_date
+FROM sys.tables
+ORDER BY 3 DESC;
