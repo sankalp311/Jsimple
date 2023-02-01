@@ -1,52 +1,19 @@
-create FUNCTION [dbo].[Split](@String varchar(MAX), @Delimiter char(1))       
-returns @temptable TABLE (items varchar(MAX))       
-as       
-begin      
-    declare @idx int       
-    declare @slice varchar(8000)       
+drop temporary table if exists t_srcids;
+        create temporary table t_srcids(Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,srcid char(255));
+        set @vIds = testSourceId;
+        set @vNames = testSourceName;
 
-    select @idx = 1       
-        if len(@String)<1 or @String is null  return       
+        set @sql = concat("insert into t_srcids (srcid) values ('", replace(@vIds,",", "'),('"),"');");
+        prepare stmt1 from @sql;
+        execute stmt1;
 
-    while @idx!= 0       
-    begin       
-        set @idx = charindex(@Delimiter,@String)       
-        if @idx!=0       
-            set @slice = left(@String,@idx - 1)       
-        else       
-            set @slice = @String       
+        drop temporary table if exists temp_names;
+        create temporary table temp_names(Id int NOT NULL AUTO_INCREMENT PRIMARY KEY, names char(255));
 
-        if(len(@slice)>0)  
-            insert into @temptable(Items) values(@slice)       
+        set @vNames = testSourceName;
 
-        set @String = right(@String,len(@String) - @idx)       
-        if len(@String) = 0 break       
-    end   
-return 
-end;
+        set @sql2 = concat("insert into temp_names (names) values ('", replace(@vNames,",", "'),('"),"');");
+        prepare stmt2 from @sql2;
+        execute stmt2;
 
-
-
-
-
-
-
-
-
-
-
-
-ALTER PROCEDURE [dbo].[spInsertDistributionRuleListType]
-(
-  @Rule_ID int,
-  @ListType_ID int,
-  @Values VARCHAR(MAX)=NULL
-)
-AS
-BEGIN
-
-    INSERT INTO DistributionRule_x_ListType (Rule_ID, ListType_ID, Value)
-    SELECT @Rule_ID, @ListType_ID, items
-    FROM [dbo].[Split] (@Values, ',')  -- call the split function 
-
-END
+        select tId.srcid,tNames.names from t_srcids tId join temp_names tNames on  tId.Id = tNames.Id;
